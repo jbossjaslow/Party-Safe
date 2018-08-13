@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WZh-ea-PAd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--speedDialVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="speedDialVC" title="drinkCounterVC" id="BYZ-38-t0r" userLabel="speedDialVC" customClass="drinkCounterVC" customModule="Party_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.72549019609999998" green="0.94117647059999998" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1471" y="134"/>
+        </scene>
+        <!--drinkCounterVC-->
+        <scene sceneID="yjQ-Ko-aiz">
+            <objects>
+                <viewController storyboardIdentifier="drinkCounterVC" title="speedDialVC" automaticallyAdjustsScrollViewInsets="NO" id="5w0-wO-omh" userLabel="drinkCounterVC" customClass="drinkCounterVC" customModule="Party_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cc9-DP-Tro"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aof-wz-aPp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zY2-jc-5el">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiB-AU-3sx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEx-ia-uPW" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ru-oE-vax">
+                                                <rect key="frame" x="0.0" y="50" width="375" height="120"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijG-Tk-sxz" userLabel="beerButton">
+                                                <rect key="frame" x="48" y="527" width="65" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="plusRoundedCorners"/>
+                                                <connections>
+                                                    <action selector="addBeer:" destination="5w0-wO-omh" eventType="touchUpInside" id="Rae-m4-1tw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC2-7I-x0b" userLabel="wineButton">
+                                                <rect key="frame" x="48" y="683" width="65" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="plusRoundedCorners"/>
+                                                <connections>
+                                                    <action selector="addWine:" destination="5w0-wO-omh" eventType="touchUpInside" id="R5r-jf-92h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yT-bM-Z4s" userLabel="shotButton">
+                                                <rect key="frame" x="48" y="842" width="65" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="plusRoundedCorners"/>
+                                                <connections>
+                                                    <action selector="addShot:" destination="5w0-wO-omh" eventType="touchUpInside" id="TCb-TH-g0V"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31o-aB-B4G" userLabel="beersLabel">
+                                                <rect key="frame" x="228" y="534" width="122" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glasses of wine" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKJ-tQ-cHh" userLabel="winesLabel">
+                                                <rect key="frame" x="228" y="660" width="147" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shots" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udV-B6-IDx" userLabel="shotsLabel">
+                                                <rect key="frame" x="228" y="849" width="122" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-6D-OE0" userLabel="numBeers">
+                                                <rect key="frame" x="121" y="532" width="99" height="54"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc5-bg-bPJ" userLabel="numWines">
+                                                <rect key="frame" x="121" y="688" width="99" height="54"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-V7-JZ9" userLabel="numShots">
+                                                <rect key="frame" x="121" y="847" width="99" height="54"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.66070740760000002" green="0.9529411793" blue="0.99818378679999997" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="4Nn-eC-iXE"/>
+                                            <constraint firstItem="4Ru-oE-vax" firstAttribute="centerX" secondItem="WEx-ia-uPW" secondAttribute="centerX" id="5X8-NB-Pdh"/>
+                                            <constraint firstItem="4Ru-oE-vax" firstAttribute="leading" secondItem="WEx-ia-uPW" secondAttribute="leading" id="VzM-IH-3qH"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Ru-oE-vax" secondAttribute="trailing" id="fE6-Xk-xUf"/>
+                                            <constraint firstItem="4Ru-oE-vax" firstAttribute="top" secondItem="WEx-ia-uPW" secondAttribute="top" constant="50" id="rYM-6B-Lbg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WEx-ia-uPW" firstAttribute="leading" secondItem="TiB-AU-3sx" secondAttribute="leading" id="9et-zi-8It"/>
+                                    <constraint firstAttribute="bottom" secondItem="WEx-ia-uPW" secondAttribute="bottom" id="AwL-dD-Rqr"/>
+                                    <constraint firstItem="WEx-ia-uPW" firstAttribute="top" secondItem="TiB-AU-3sx" secondAttribute="top" id="QL4-aF-Lak"/>
+                                    <constraint firstAttribute="trailing" secondItem="WEx-ia-uPW" secondAttribute="trailing" id="Tjk-NG-P0a"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66070740756388879" green="0.9529411793" blue="0.99818378682499997" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="TiB-AU-3sx" firstAttribute="leading" secondItem="zY2-jc-5el" secondAttribute="leading" id="NhP-Fw-G37"/>
+                            <constraint firstItem="TiB-AU-3sx" firstAttribute="top" secondItem="zY2-jc-5el" secondAttribute="top" id="WM4-Pg-4BO"/>
+                            <constraint firstAttribute="trailing" secondItem="TiB-AU-3sx" secondAttribute="trailing" id="dBc-LT-qYo"/>
+                            <constraint firstItem="WEx-ia-uPW" firstAttribute="width" secondItem="zY2-jc-5el" secondAttribute="width" id="eKH-FB-HYX"/>
+                            <constraint firstItem="Aof-wz-aPp" firstAttribute="top" secondItem="TiB-AU-3sx" secondAttribute="bottom" id="y7f-yC-0kY"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="BACLabel" destination="4Ru-oE-vax" id="aOT-1n-9M8"/>
+                        <outlet property="beersLabel" destination="31o-aB-B4G" id="M5c-Dv-fr3"/>
+                        <outlet property="numBeers" destination="flK-6D-OE0" id="eVa-xn-JCp"/>
+                        <outlet property="numShots" destination="kT1-V7-JZ9" id="dww-Lx-2hU"/>
+                        <outlet property="numWines" destination="Fc5-bg-bPJ" id="HV0-9E-YuZ"/>
+                        <outlet property="shotsLabel" destination="udV-B6-IDx" id="y2S-tq-Oni"/>
+                        <outlet property="winesLabel" destination="NKJ-tQ-cHh" id="fDZ-lJ-DaL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJn-cP-blP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655.20000000000005" y="283.35832083958024"/>
+        </scene>
+        <!--Root Page View Controller-->
+        <scene sceneID="eCk-RY-0bb">
+            <objects>
+                <pageViewController storyboardIdentifier="RootPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9Mc-n7-o8I" customClass="RootPageViewController" customModule="Party_Safe" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgn-BJ-Lgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2218" y="134"/>
+        </scene>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="DYF-ua-wGH">
+            <objects>
+                <pageViewController storyboardIdentifier="OnboardingPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="WZh-ea-PAd" userLabel="Onboarding Page View Controller" customClass="OnbaordingPageViewController" customModule="Party_Safe" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haJ-W8-VEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2218" y="1096"/>
+        </scene>
+        <!--OVC1-->
+        <scene sceneID="zCP-ua-7Sa">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="I6P-V9-Jqy" userLabel="OVC1" customClass="OnboardingViewController" customModule="Party_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b7t-Gw-7C6"/>
+                        <viewControllerLayoutGuide type="bottom" id="yy4-3o-tf1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YOQ-hX-BJ3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahF-hu-xOO">
+                                <rect key="frame" x="87" y="283" width="200" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="castor-cat"/>
+                                <connections>
+                                    <action selector="endOnboarding:" destination="I6P-V9-Jqy" eventType="touchUpInside" id="xlS-rT-pUF"/>
+                                    <segue destination="9Mc-n7-o8I" kind="popoverPresentation" popoverAnchorView="ahF-hu-xOO" id="XiO-Zu-qr5">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEb-Ga-oRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1471" y="1097"/>
+        </scene>
+        <!--settingsVC-->
+        <scene sceneID="GWR-Vg-tZL">
+            <objects>
+                <viewController storyboardIdentifier="settingsVC" title="settingsVC" id="hkr-vi-Zgy" customClass="settingsVC" customModule="Party_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oax-n4-8dQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oQj-V8-lpO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kMC-W2-g1y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.34509804840000002" blue="0.3058823645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLI-8l-wvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="castor-cat" width="600" height="353"/>
+        <image name="plusRoundedCorners" width="272" height="272"/>
+    </resources>
+</document>
